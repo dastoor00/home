@@ -110,6 +110,24 @@
     .coming-panel h3 em { color: #d9b773; font-weight: 400; }
     .coming-panel p { max-width: 580px; margin: 0 auto; line-height: 1.9; color: #d4d8cb; font-size: 14px; }
     .coming-stamp { display: inline-block; margin-top: 34px; padding: 10px 16px; border: 1px solid rgba(217,183,115,.7); color: #e4c98e; text-transform: uppercase; font-size: 9px; letter-spacing: .2em; transform: rotate(-3deg); }
+
+    .product-groups { display: grid; gap: 54px; margin-top: 45px; }
+    .product-group-title { font: 30px var(--serif); margin: 0 0 8px; color: var(--paper); }
+    .product-group-intro { color: #c4c9b8; font-size: 13px; line-height: 1.8; margin-bottom: 22px; }
+    .product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+    .product-card { background: var(--paper-light); color: var(--ink); border: 1px solid rgba(217,183,115,.55); padding: 12px; min-width: 0; transition: transform .25s; }
+    .product-card:hover { transform: translateY(-4px); }
+    .product-card img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; background: #e6d9bf; }
+    .product-card h4 { font: 20px/1.25 var(--serif); color: var(--green); margin: 16px 2px 6px; }
+    .product-card p { color: var(--muted); font-size: 11px; line-height: 1.6; margin: 0 2px 8px; }
+    .product-label { color: var(--red); font-size: 8px; text-transform: uppercase; letter-spacing: .16em; margin: 2px; }
+    .keychain-card { display: grid; grid-template-columns: minmax(220px, .8fr) 1.2fr; gap: 28px; align-items: center; background: var(--paper-light); color: var(--ink); border: 1px solid rgba(217,183,115,.55); padding: 20px; }
+    .keychain-card img { width: 100%; max-height: 380px; object-fit: contain; background: #e6d9bf; }
+    .keychain-card h4 { font: 36px var(--serif); color: var(--green); margin: 12px 0; }
+    .keychain-card p { color: var(--muted); font-size: 13px; line-height: 1.9; }
+    @media (max-width: 900px) { .product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 680px) { .product-grid { gap: 10px; } .product-card { padding: 8px; } .product-card h4 { font-size: 17px; } .keychain-card { grid-template-columns: 1fr; } }
+
     .team { background: #e9dfca; }
     .team-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 13px; }
     .member { padding: 25px 18px 22px; border: 1px solid rgba(40,62,50,.2); min-height: 155px; position: relative; transition: transform .3s, background .3s, border-color .3s; background: rgba(251,246,235,.35); }
@@ -231,14 +249,38 @@
 
     <section class="coming" id="collection">
       <div class="section-head">
-        <div><div class="section-kicker reveal">02 — A little anticipation</div><h2 class="reveal delay-1">Something lovely<br>is <em>taking shape.</em></h2></div>
-        <p class="section-intro reveal delay-2">Good things deserve time. We’re carefully preparing our first collection, with the details, materials, and stories that deserve to be shared — not rushed.</p>
+        <div><div class="section-kicker reveal">02 — The world of Dastoor</div><h2 class="reveal delay-1">Tradition in<br><em>everyday forms.</em></h2></div>
+        <p class="section-intro reveal delay-2">A growing collection of ideas inspired by regional art, detail and sensory memory. Thoughtful products that bring the colours, craft and stories of Kashmir into everyday life.</p>
       </div>
-      <div class="coming-panel reveal">
-        <div class="mini">The first chapter is almost here</div>
-        <h3>Coming <em>soon.</em></h3>
-        <p>Our shelves are still a story waiting to unfold. Until then, consider this a quiet promise: thoughtful details, cultural inspiration, and a little bit of Dastoor magic are on their way.</p>
-        <span class="coming-stamp">In the making · With love</span>
+      <div class="product-groups">
+        <div class="reveal">
+          <h3 class="product-group-title">Handcrafted soaps</h3>
+          <p class="product-group-intro">A thoughtful collection inspired by natural ingredients and the beauty of Kashmir.</p>
+          <div class="product-grid">
+            <article class="product-card"><img src="dastoor_assets/product-1.jpg" alt="Gul-e-Naaz — Rose Handicraft Soap" loading="lazy"><div class="product-label">Handcrafted soap</div><h4>Gul-e-Naaz</h4><p>Rose Handicraft Soap</p></article>
+            <article class="product-card"><img src="dastoor_assets/product-2.jpg" alt="Bun-e-jaan — Coffee Handicraft Soap" loading="lazy"><div class="product-label">Handcrafted soap</div><h4>Bun-e-jaan</h4><p>Coffee Handicraft Soap</p></article>
+            <article class="product-card"><img src="dastoor_assets/product-3.jpg" alt="Resham-e-Naaz — Shea Butter Handicraft Soap" loading="lazy"><div class="product-label">Handcrafted soap</div><h4>Resham-e-Naaz</h4><p>Shea Butter Handicraft Soap</p></article>
+            <article class="product-card"><img src="dastoor_assets/product-4.jpg" alt="Naram-e-Kashmir — Goat Milk Handicraft Soap" loading="lazy"><div class="product-label">Handcrafted soap</div><h4>Naram-e-Kashmir</h4><p>Goat Milk Handicraft Soap</p></article>
+          </div>
+        </div>
+        <div class="reveal">
+          <h3 class="product-group-title">Solid perfumes</h3>
+          <p class="product-group-intro">Solid perfumes inspired by evocative notes and the poetry of the region.</p>
+          <div class="product-grid">
+            <article class="product-card"><img src="dastoor_assets/product-5.jpg" alt="Kashmiri Chandan — Sandalwood Solid Perfume" loading="lazy"><div class="product-label">Solid perfume</div><h4>Kashmiri Chandan</h4><p>Sandalwood Solid Perfume</p></article>
+            <article class="product-card"><img src="dastoor_assets/product-6.jpg" alt="Noor-e-Yasmeen — Jasmine Solid Perfume" loading="lazy"><div class="product-label">Solid perfume</div><h4>Noor-e-Yasmeen</h4><p>Jasmine Solid Perfume</p></article>
+            <article class="product-card"><img src="dastoor_assets/product-7.jpg" alt="Gulnaar — Rose Solid Perfume" loading="lazy"><div class="product-label">Solid perfume</div><h4>Gulnaar</h4><p>Rose Solid Perfume</p></article>
+            <article class="product-card"><img src="dastoor_assets/product-8.jpg" alt="Shaam-e-Sukoon — Lavender Solid Perfume" loading="lazy"><div class="product-label">Solid perfume</div><h4>Shaam-e-Sukoon</h4><p>Lavender Solid Perfume</p></article>
+          </div>
+        </div>
+        <div class="reveal">
+          <h3 class="product-group-title">Basohli Baithak keychains</h3>
+          <p class="product-group-intro">Small keepsakes with a story rooted in heritage.</p>
+          <article class="keychain-card">
+            <img src="dastoor_assets/product-9.jpg" alt="Chamak Basohli Baithak keychain" loading="lazy">
+            <div><div class="product-label">Art to carry</div><h4>CHAMAK</h4><p><strong>Keychain</strong></p><p>Inspired by the colourful artistry of Basohli, Chamak brings a traditional touch to an everyday accessory. A little piece of heritage to carry with you — wherever the day takes you.</p><p><em>A little piece of heritage, wherever you go.</em></p></div>
+          </article>
+        </div>
       </div>
     </section>
 
